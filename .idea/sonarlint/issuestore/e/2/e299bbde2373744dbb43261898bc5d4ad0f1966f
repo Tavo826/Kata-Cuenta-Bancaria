@@ -1,0 +1,11 @@
+
+J
+java:S3740	"/Provide the parametrized type for this generic.(¸Ìë•üÿÿÿÿ
+J
+java:S3740
+"/Provide the parametrized type for this generic.(ÔÚ™çúÿÿÿÿ
+ž
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(­öè²8þÍ¹ÎÕ/
+A
+java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‡“ˆð
