@@ -1,49 +1,38 @@
 package Cuenta;
 
+import java.text.ParseException;
+import java.time.LocalDate;
+
 public class Transaction {
 
-    private String date;
+    private LocalDate date;
     private String type;
     private double amount;
     private double actualBalance;
 
-    public Transaction(String date, String type, double amount, double actualBalance) {
-        this.date = date;
+    DateFormat dateFormat = new DateFormat();
+
+    public Transaction(String date, String type, double amount, double actualBalance) throws ParseException {
+        this.date = dateFormat.dateTransform(date);;
         this.type = type;
         this.amount = amount;
         this.actualBalance = actualBalance;
     }
 
-    public String getDate() {
-        return date;
-    }
+    public LocalDate getDate() { return date;}
     
-    public String getType() {
-        return type;
-    }
+    public String getType() { return type; }
 
-    public double getAmount() {
-        return amount;
-    }
+    public double getAmount() { return amount;}
 
-    public void setDate(String date) {
-        this.date = date;
-    }
+    public void setDate(LocalDate date) { this.date = date; }
 
-    public void setType(String type) {
-        this.type = type;
-    }
+    public void setType(String type) { this.type = type; }
 
-    public void setAmount(double amount) {
-        this.amount = amount;
-    }
+    public void setAmount(double amount) { this.amount = amount; }
 
-    public double getActualBalance() {
-        return actualBalance;
-    }
+    public double getActualBalance() { return actualBalance; }
 
-    public void setActualBalance(double actualBalance) {
-        this.actualBalance = actualBalance;
-    }
+    public void setActualBalance(double actualBalance) { this.actualBalance = actualBalance; }
     
 }
