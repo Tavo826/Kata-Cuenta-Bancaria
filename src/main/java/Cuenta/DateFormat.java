@@ -3,24 +3,20 @@ package Cuenta;
 import java.text.ParseException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
 public class DateFormat {
 
-    private DateTimeFormatter formate = DateTimeFormatter.ofPattern("dd/MM/yyyy");  
-    private Date date;
+    private DateTimeFormatter formatte = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     public DateFormat() {
     }
 
-    public LocalDate dateTransform(String strDate) throws ParseException {
-        
-        LocalDate fecha = LocalDate.parse(strDate, formate);
-        return fecha;
+    public LocalDate toDateFormat(String strDate) throws ParseException {        
+        return LocalDate.parse(strDate, formatte);        
     }
 
-    public Date getDate() {
-        return date;
-    }   
+    public String toStringFormat(LocalDate date) {
+        return date.format(formatte);
+    }
 
 }

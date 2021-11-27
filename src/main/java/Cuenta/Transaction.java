@@ -5,7 +5,8 @@ import java.time.LocalDate;
 
 public class Transaction {
 
-    private LocalDate date;
+    public LocalDate date;
+    public String strDate;
     private String type;
     private double amount;
     private double actualBalance;
@@ -13,13 +14,15 @@ public class Transaction {
     DateFormat dateFormat = new DateFormat();
 
     public Transaction(String date, String type, double amount, double actualBalance) throws ParseException {
-        this.date = dateFormat.dateTransform(date);;
+        this.date = dateFormat.toDateFormat(date);
         this.type = type;
         this.amount = amount;
         this.actualBalance = actualBalance;
     }
 
     public LocalDate getDate() { return date;}
+
+    public String getStrDate() { return dateFormat.toStringFormat(date);}
     
     public String getType() { return type; }
 
